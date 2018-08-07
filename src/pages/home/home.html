@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-navbar class="header_title">
+      <button ion-button menuToggle right class="menu_bt">
+          <i class="fa fa-cog"></i>
+        </button>
+    <ion-title id="title" (click)="mainCalendar();">engage</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid *ngIf="this.event">
+    <ion-row>
+      <div id="u23">
+        <p><span>NEXT APPOINTMENT</span></p>
+      </div>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div id="u78_text">
+          <p class="text_date" style="font-size:48px;line-height:40px;"><span>18</span></p>
+          <p class="text_date date" style="font-size:16px;line-height:20px;"><span>THU</span></p>
+          <p class="text_date date" style="font-size:16px;line-height:20px;"><span>FEB</span></p>
+        </div>
+        <div id="u24" (click)="load_Map();" style="cursor: pointer;">
+          <p><span>Johanssen HVAC <br> 123 Main St <br> Unit 522 <br> Jacksonville, FL</span></p>
+        </div>
+      </ion-col>
+      <ion-col class="right_side" style=" margin-right: 6%;">
+          <p id="u25"><span>10:00 AM - 11:00 AM</span></p>
+          <p id="u73_text">
+            <span style="font-family: FontAwesome; font-weight: 400; color: rgb(73, 174, 97);"> </span>
+            <span style="font-family: &quot;Poppins Light&quot; &quot;Poppins Regular&quot;, Poppins; font-weight: 300; color: rgb(102, 102, 102);">Sandra Wilkins</span>
+          </p>
+          <p id="u74_text" style="transform-origin: 62.5px 10.5px 0px; top: 0px;"><span style="font-family: FontAwesome; font-weight: 400;"></span><span style="font-family: FontAwesome; font-weight: 400;" class="" id="cache107"> </span><span style="font-family: &quot;Poppins Light&quot;, &quot;Poppins Regular&quot;, Poppins; font-weight: 300;" class="" id="cache108">305-699-3112</span></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="line">
+        <div id="u56_text" style="left: 0px; width: 100%; transform-origin: 51.5px 9px 0px;">
+          <p><span>CURRENT ETA</span></p>
+          <p id="time" style="font-size:16px;margin: -4px 0px;"><span style="font-family:'Poppins Light', 'Poppins Regular', 'Poppins';font-weight:700;">10:02 AM</span></p>
+        </div>
+      </ion-col>
+      <ion-col class="line">
+        <div id="u57_text" style="left: 0px; width: 75px; transform-origin: 37.5px 21.5px 0px;">
+          <p style="font-size:14px;"><span style="font-family:'Montserrat-Bold', 'Montserrat Bold', 'Montserrat';font-weight:700;">DISTANCE</span></p>
+          <p style="font-size:16px;"><span style="font-family:'Poppins Light', 'Poppins Regular', 'Poppins';font-weight:700;">3 miles</span></p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div id="u37" class="ax_default ellipse">
+          <img id="u37_img" class="img" src="https://engagemyclient.net/img/circle-blue.png">
+        </div>
+      </ion-col>
+        <div id="u36" class="ax_default line">
+          <img id="u36_img" class="img" src="https://d26uhratvi024l.cloudfront.net/gsc/WXP0DC/55/46/96/5546965ba02c41b8b18015f5cf769369/images/home/u29.png?token=c182c0198c7d453803fa24bad443d8ba">
+        </div>
+        <div class="ax_default box_2">
+          <img  class="u39" id="{{this.distance}}" src="https://engagemyclient.net/img/dot-blue.png">
+        </div>
+      <ion-col>
+        <div id="u38" class="ax_default ellipse">
+          <img id="u38_img" class="img" src="https://engagemyclient.net/img/circle-blue.png">
+        </div>
+      </ion-col>
+    </ion-row>
+    <div id="u63_text">
+      <p><span>-- traffic disruption on route --</span></p>
+    </div>
+    <ion-row>
+      <ion-col width-80>
+        <div id="u72_text" class="text" style="transform-origin: 109px 9px 0px; left: 0px;">
+          <p id="cache100" ><span  id="cache101">SEND TRAVEL NOTIFICATIONS</span></p>
+        </div>
+      </ion-col>
+      <ion-col width-20>
+          <ion-toggle checked="true"></ion-toggle>
+      </ion-col>
+    </ion-row>
+    <ion-row id="message">
+      <ion-col>
+        <p id="u76_text"><span>Last Notification:&nbsp; Lorem ipsum dolor sit amet, similique elaboraret eam in. Soluta ancillae ne mei, sea veri et dolor sit amet, similique </span></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <button ion-button block class="event-button" (click)="eventDetails();" >
+        <ion-label> <i id="calendar" class="fa fa-calendar"></i>EVENT DETAILS</ion-label>
+      </button>
+    </ion-row>
+  </ion-grid>
+
+  <div class="original" *ngIf="this.calendar">
+    <div id="u22_text">
+      <p><span>No Upcoming Appointments Today</span></p>
+    </div>
+    <div id="u21" (click)=calendarEvent();>
+      <ion-label> <i id="main_calendar" class="fa fa-calendar"></i></ion-label>
+    </div>
+  </div>
+
+    <div id="u16" >
+        <div id="u79" class="calendar" style = "float: left; clear: left;" (click)="eventToday();">
+          <ion-label> <i class="fa fa-calendar"></i></ion-label>
+          <div id="u83_text">
+            <p><span>MANAGE</span></p>
+          </div>
+          <div id="u81_text" style = "float: left; clear: left;">
+            <p id="cache124"><span id="cache125">EVENTS <br> TODAY</span></p>
+          </div>
+          <div id="u88_text" style = "float: left;">
+            <p><span>99</span></p>
+          </div>
+        </div>
+        <div id="u80" class="calendar" style = "float: right;" (click)="toDo();">
+          <ion-label> <i class="fa fa-calendar-times-o"></i></ion-label>
+          <div id="u85_text" >
+            <p><span>MANAGE</span></p>
+          </div>
+          <div id="u84_text">
+            <p><span>TO-DOS</span></p>
+          </div>
+          <div id="u89_text" >
+            <p><span>99</span></p>
+          </div>
+        </div>
+    </div>
+
+    <ion-footer>
+      <div id="u87_text" style = "float: left; clear: left;" (click)="openHelp();">
+        <p><span>Need Help?</span></p>
+      </div>
+      <div id="u86_text"  style = "float: right;" (click)="contact();">
+        <p><span>Contact Us</span></p>
+      </div>
+    </ion-footer>
+</ion-content>

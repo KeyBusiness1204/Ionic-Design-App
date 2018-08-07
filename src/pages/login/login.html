@@ -1,0 +1,38 @@
+
+<ion-content padding>
+    <div id="u15" *ngIf="!this.registerCredentials.email && this.required ">
+      <div id="u15_text">
+        <p><span style="font-family:'FontAwesome';font-weight:400;font-size:20px;"> </span><span style="font-family:'LucidaGrande', 'Lucida Grande';font-weight:400;font-size:20px;"> </span><span style="font-family:'Poppins Light', 'Poppins Regular', 'Poppins';font-weight:300;font-size:16px;">Email Address is required</span></p>
+      </div>
+    </div>
+    <div id="u15" *ngIf="!this.registerCredentials.password && this.e_required && this.registerCredentials.email">
+      <div id="u15_text">
+        <p><span style="font-family:'FontAwesome';font-weight:400;font-size:20px;"> </span><span style="font-family:'LucidaGrande', 'Lucida Grande';font-weight:400;font-size:20px;"> </span><span style="font-family:'Poppins Light', 'Poppins Regular', 'Poppins';font-weight:300;font-size:16px;">Password is required</span></p>
+      </div>
+    </div>
+    <div id="u3">
+      <p><span>MOBILE PROFESSIONAL</span></p>
+    </div>
+    <div id="u2" >
+      <p><span>engage</span></p>
+    </div>
+    <ion-list class="login-form">
+      <ion-item >
+        <ion-label > <i class="fa fa-envelope"></i></ion-label>
+        <ion-input type="email" placeholder="EMAIL ADDRESS" [(ngModel)]="registerCredentials.email"></ion-input>
+      </ion-item>
+      <ion-item >
+          <ion-label > <i class="fa fa-lock"></i></ion-label>
+        <ion-input type="password"  placeholder="PASSWORD"  [(ngModel)]="registerCredentials.password" show-hide-input></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block class="login-button" (click)="Login();" >LOG IN</button>
+    <div class='forgot' (click)="forgotPassword();"><span>FORGOT PASSWORD?</span></div>
+    <ion-footer>
+      <ion-label style = "float: left; clear: left;" (click)="openHelp()" > <i class="fa fa-question-circle"></i></ion-label>
+      <ion-label style = "float: right;" (click)="openFacebook()"> <i class="fa fa-facebook-square"></i></ion-label>
+      <div id="u12_text" >
+        <p><span>©2018 Quinnova Digital</span></p>
+      </div>
+    </ion-footer>
+  </ion-content>

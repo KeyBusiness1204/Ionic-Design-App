@@ -1,0 +1,11 @@
+<ion-content padding>
+    <div id="u200_text" >
+      <p><span>How many flights will you be taking to get to your destination?</span></p>
+    </div>
+    <ion-select id="select_count" interface="popover"  [(ngModel)]="count" (ionChange)="selectCount(count);">
+      <ion-option *ngFor="let count of counts; let i = index" [selected]="i == 0" value="{{count}}" >{{count}}</ion-option>
+    </ion-select>
+    <button ion-button block class="edit-event-button" (click)="continue();" >
+      <ion-label>CONTINUE</ion-label>
+    </button>
+</ion-content>

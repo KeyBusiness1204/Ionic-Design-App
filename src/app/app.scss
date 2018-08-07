@@ -1,0 +1,60 @@
+
+@media only screen and (min-height: 0px) and (min-width: 0px) {
+    .modal-wrapper {
+      position: absolute;
+      top: 38%;
+      left: 6%;
+      right: 6%;
+      height: 28%;
+      border: 1px solid #c8c7cc;
+    }
+}
+
+
+#menu_title{
+  .toolbar-title-ios{
+
+    font-size: 14px;
+    font-family: 'Montserrat-Bold', 'Montserrat Bold', 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    color: #666666;
+  }
+}
+#menu_list{
+  .item-ios.item-block .item-inner{
+    border-bottom: 0px;
+  }
+  .toggle-ios{
+    height: 55%;
+    padding-top: 10px;
+    float: right;
+    width: 18%;
+  }
+  .toggle-md{
+    height: 55%;
+    padding-top: 10px;
+    float: right;
+    width: 18%;
+  }
+  .toggle-ios.toggle-checked .toggle-inner{
+    height: 84%;
+  }
+  .toggle-md.toggle-checked .toggle-inner{
+    height: 84%;
+  }
+  .toggle-ios .toggle-inner{
+    height: 84%;
+    width: 45%;
+  }
+  .toggle-md .toggle-inner{
+    height: 84%;
+    width: 45%;
+  }
+  .toggle-ios.toggle-checked .toggle-icon{
+    background-color: #49AE61;
+  }
+  .toggle-md.toggle-checked .toggle-icon{
+    background-color: #49AE61;
+  }
+}

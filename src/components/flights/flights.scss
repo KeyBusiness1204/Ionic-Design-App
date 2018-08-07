@@ -1,0 +1,38 @@
+flights {
+  background-color: rgba(242, 242, 242, 1);
+  $modal-inset-box-shadow-color: rgba(0, 0, 0, .4);
+  #u200_text{
+    font-family: 'Poppins-Regular', 'Poppins';
+    font-weight: 400;
+    text-align: center;
+    font-size: 16px;
+  }
+  .select-ios{
+    border: 1px solid rgba(204, 204, 204, 1);
+    border-radius: 3px;
+    max-width: 20%;
+    margin-right: 40%;
+    margin-left: 40%;
+    background: white;
+    padding: 6px 8px 6px 16px;
+  }
+  .select-text{
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #666666;
+  }
+  .select-ios .select-icon .select-icon-inner{
+    width: 11px;
+    color: #666666;
+    left: -7px;
+    top: 60%;
+  }
+  .edit-event-button{
+    background-color: rgba(15, 117, 188, 1);
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    font-weight: 400;
+    margin-top: 3%;
+  }
+}

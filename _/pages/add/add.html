@@ -1,0 +1,138 @@
+
+<ion-header>
+    <ion-navbar class="header_title" hideBackButton="true">
+        <i  (click)="back();" class="fa fa-chevron-left"></i>
+      <button ion-button menuToggle right class="menu_bt">
+        <i class="fa fa-cog"></i>
+      </button>
+      <ion-title id="title">engage</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content padding>
+      <ion-item class="list">
+        <span id="cache224" style="clear: left; float: left; margin-left: 2%;">ADD FLIGHT TO EVENT</span>
+      </ion-item>
+      <ion-grid>
+        <ion-row class="title_list_{{this.status}}">
+          <ion-col>
+              <span  *ngIf="status == 'unpending'" id="check-o" style="float: left"> <i class="fa fa-calendar-check-o"></i></span>
+              <span  *ngIf="status == 'unpending'" id="cache208" >CONFIRMED</span>
+              <span  *ngIf="status != 'unpending'" id="calendar-o" style="float: left"> <i class="fa fa-calendar-o"></i>PENDING CONFIRMATION</span>
+          </ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col width-20 id="u78_col">
+            <p class="number" style="font-size:48px;"><span>18</span></p>
+            <p class="date" style="font-size:16px;"><span>THU, FEB</span></p>
+          </ion-col>
+          <ion-col width-80>
+            <p id="u25"><span>10:00 AM - 11:00 AM</span></p>
+            <p id="u26"><span>Johanssen HVAC <br> Jacksonville, FL <br> Sandra Wilkins </span></p>
+            <!-- <p *ngIf="status == 'unpending'" class="u74_text" style="background-color: #006600; transform-origin: 62.5px 10.5px 0px; top: 0px;"><span style="font-family: FontAwesome; font-weight: 400;"></span><span class="" id="cache107" style="font-family: FontAwesome; font-weight: 400;"> </span><span class="" id="cache108" style="font-family: &quot;Poppins Light&quot;, &quot;Poppins Regular&quot;, Poppins; font-weight: 300;">305-699-3112</span></p>
+            <p *ngIf="status != 'unpending'" class="u74_text" style="background-color: rgba(10, 73, 123, 1);transform-origin: 62.5px 10.5px 0px; top: 0px;"><span style="font-family: FontAwesome; font-weight: 400;"></span><span class="" id="cache107" style="font-family: FontAwesome; font-weight: 400;"> </span><span class="" id="cache108" style="font-family: &quot;Poppins Light&quot;, &quot;Poppins Regular&quot;, Poppins; font-weight: 300;">305-699-3112</span></p> -->
+          </ion-col>
+        </ion-row>
+        <ion-list class="date" *ngIf="!this.added">
+          <ion-label >DEPARTURE DATE</ion-label>
+          <ion-item >
+            <ion-label id="app_label_date"><i class="fa fa-calendar"></i></ion-label>
+            <ion-datetime class="app_input" placeholder="01/20/2018" displayFormat="MM/DD/YYYY" pickerFormat="MMM D YYYY" [(ngModel)]="this.date"></ion-datetime>           
+          </ion-item>
+          <ion-label style="margin-top: 5%; margin-left:4%;">
+            <img  class="img" src="https://d2v8ggac1o0f6z.cloudfront.net/gsc/WXP0DC/55/46/96/5546965ba02c41b8b18015f5cf769369/images/home/u238.png?token=dd165302211987d2aa12d016fce5288b">
+            AIRLINE</ion-label>
+          <ion-row id="{{this.id}}">
+            <ion-item style="margin-left:4%; width: 96%;" >
+              <ion-select id="select_airline" interface="popover"   [(ngModel)]="airline">
+                <ion-option *ngFor="let airline of airlines; let i = index" value="{{airline}}" >{{airline}}</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-label style="margin-top: 5%; margin-left: 4%;">FLIGHT NUMBER</ion-label>
+            <ion-item style="margin-left:4%; width: 96%;" >
+              <ion-input type="text"  [(ngModel)]="this.flight_number"></ion-input>
+            </ion-item>
+          </ion-row>
+          <div *ngIf="this.count > 1">
+              <ion-row *ngFor="let flight of this.flights; let i = index" >
+                  <ion-label style="margin-top: 3%; margin-left: 4%;">
+                    <img class="img" src="https://d2v8ggac1o0f6z.cloudfront.net/gsc/WXP0DC/55/46/96/5546965ba02c41b8b18015f5cf769369/images/home/u238.png?token=dd165302211987d2aa12d016fce5288b">
+                    CONNECTING AIRLINE
+                  </ion-label>
+                  <ion-row id="{{this.id}}">
+                    <ion-item style="margin-left: 4%; width: 96%;" >
+                      <ion-select id="connect_airline" interface="popover" [(ngModel)]="connect_airline">
+                        <ion-option *ngFor="let connect_airline of connect_airlines; let i = index" value="{{connect_airline}}" >{{connect_airline}}</ion-option>
+                      </ion-select>
+                    </ion-item>    
+                    <ion-label style="margin-top: 5%; margin-left: 10%;">CONNECTING FLIGHT NUMBER</ion-label>
+                    <ion-item style="margin-left: 4%; width: 96%;" >
+                      <ion-input type="text" [(ngModel)]="this.connecting_number" ></ion-input>
+                    </ion-item>
+                  </ion-row>                                         
+              </ion-row>     
+          </div>            
+          <ion-row>
+              <button ion-button block class="edit-event-button" (click)="addFlight();" >
+                  ADD FLIGHT
+              </button>
+          </ion-row>
+        </ion-list>
+        <ion-list class="date" *ngIf="this.added">
+            <ion-label >DEPARTURE DATE</ion-label>
+           <ion-item style="border: 0px;padding-left: 0px;">
+             {{this.date}}
+           </ion-item>
+            <ion-label style="margin-top: 5%; ">
+              <img  class="img" src="https://d2v8ggac1o0f6z.cloudfront.net/gsc/WXP0DC/55/46/96/5546965ba02c41b8b18015f5cf769369/images/home/u238.png?token=ac6ea59c8d3200d6ec0a20e9e9fb5d94">
+              AIRLINE</ion-label>
+            <ion-row id="{{this.id}}" style="margin-top:0px; margin-left: 1%;">
+              <ion-item id="air_line" style="width: 90%;border: 0px " >
+                {{this.airline}}
+              </ion-item>
+              <ion-item id="flight_num" style=" width: 90%;border: 0px " >
+                {{this.flight_number}} <span style="color:#49AE61;">ON TIME</span>
+              </ion-item>
+            </ion-row>
+            <div *ngIf="this.count > 1">
+              <ion-row *ngFor="let flight of this.flights; let i = index"  >
+                <ion-item style="padding-left: 1px; border: 0px;"> 
+                  <ion-label>
+                    <img class="img" src="https://d2v8ggac1o0f6z.cloudfront.net/gsc/WXP0DC/55/46/96/5546965ba02c41b8b18015f5cf769369/images/home/u238.png?token=ac6ea59c8d3200d6ec0a20e9e9fb5d94">
+                    CONNECTING AIRLINE
+                  </ion-label>
+                </ion-item>                  
+                <ion-row id="{{this.id}}" style="margin-left: 1%; margin-top: 0%;">
+                  <ion-item  id="connect_air_line" style="margin-left: 2%; width: 90%;border: 0px" >
+                    {{this.connect_airline}}
+                  </ion-item>
+                  <ion-item id="connecting_num" style="margin-left:2%; width: 90%;border: 0px " >
+                    {{this.connecting_number}} <span style="color:#49AE61;">ON TIME</span>
+                  </ion-item>
+                </ion-row>                 
+              </ion-row>             
+            </div>
+            <ion-row>
+              <ion-col>
+                <button ion-button block class="back_button" (click)="backButton();" >
+                    BACK
+                </button>
+              </ion-col>
+              <ion-col>
+                <button ion-button block class="edit-event-button" (click)="save();" >
+                    SAVE
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-list>
+
+      </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <div id="u87_text" style = "float: left; clear: left;" (click)="openHelp();">
+    <p><span>Need Help?</span></p>
+  </div>
+  <div id="u86_text"  style = "float: right;" (click)="contact();">
+    <p><span>Contact Us</span></p>
+  </div>
+</ion-footer>

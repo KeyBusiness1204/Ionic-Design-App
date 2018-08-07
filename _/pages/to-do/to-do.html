@@ -1,0 +1,144 @@
+
+<ion-header>
+    <ion-navbar class="header_title" hideBackButton="true">
+      <i (click)="back();" class="fa fa-chevron-left"></i>
+      <button ion-button menuToggle right class="menu_bt">
+        <i class="fa fa-cog"></i>
+      </button>
+      <ion-title id="title">engage</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <div id="u23">
+        <p><span>TO-DO LIST</span></p>
+      </div>
+    </ion-row>
+    <div class="submit">
+      <ion-row class="first_row">
+        <ion-col width-15 id="u78_col">
+          <p class="number" style="font-size:48px;"><span>18</span></p>
+          <p class="date" style="font-size:16px;"><span>FEB</span></p>
+        </ion-col>
+        <ion-col width-85>
+          <p id="u25"><span>10:00 AM - 11:00 AM</span></p>
+          <p id="u26"><span>Johanssen HVAC, Jacksonville, FL <br> Sandra Wilkins </span></p>
+        </ion-col>
+      </ion-row>
+      <div class={{this.divClass}}>
+        <ion-row class="title_list">
+          <ion-col>
+              <span  *ngIf="status == 'unsubmitted'" id="check-o" style="float: left"> <i class="fa fa-calendar-plus-o"></i></span>
+              <span  *ngIf="status == 'unsubmitted'" id="cache208" >UPDATE SUBMITTED</span>
+              <span  *ngIf="status != 'unsubmitted'" id="calendar-o" style="float: left"> <i class="fa fa-calendar-o"></i></span>
+              <span  *ngIf="status != 'unsubmitted'" id="cache209" >EVENT UPDATE</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-item text-wrap id="chat">{{this.msg}}</ion-item>
+        </ion-row>
+        <ion-row class="checkbox_input">
+          <input  type="checkbox" value="checkbox1" checked="">
+          <label> Wed, February 23, 2018 1:00 PM</label>
+        </ion-row>
+        <ion-row class="checkbox_input">
+          <input type="checkbox" value="checkbox2" checked="">
+          <label> Fri, February 25, 2018 10:00 AM</label>
+        </ion-row>
+        <ion-row *ngIf="status != 'unsubmitted'" class="checkbox_input">
+          <input  type="checkbox" value="checkbox3" checked="">
+          <label> Mon, February 28, 2018 11:00 AM</label>
+        </ion-row>
+        <p *ngIf="status != 'unsubmitted'" class="u74_text" style="background-color: rgba(10, 73, 123, 1);transform-origin: 62.5px 10.5px 0px; top: 0px;"><span style="font-family: FontAwesome; font-weight: 400;"></span><span class="" id="cache107" style="font-family: FontAwesome; font-weight: 400;"> </span><span class="" id="cache108" style="font-family: &quot;Poppins Light&quot;, &quot;Poppins Regular&quot;, Poppins; font-weight: 300;">Choose another option</span></p>
+        <button ion-button block class="event-button" (click)="update();" >
+          <ion-label>{{this.btn}}</ion-label>
+        </button>
+      </div>
+    </div>
+
+    <ion-list>
+        <ion-item id="u112">
+          <div style="cursor: pointer; visibility: inherit;" >
+            <!-- <span  *ngIf="item.status == 'unpending'" id="check-o" style="float: left"> <i class="fa fa-calendar-check-o"></i></span>
+            <span  *ngIf="item.status == 'unpending'" id="cache208" >CONFIRMED</span> -->
+            <span  id="calendar-o" style="float: left"> <i class="fa fa-calendar-o"></i></span>
+            <span  id="cache209" >PENDING CONFIRMATION</span>
+            <ion-item text-wrap id="message">The client has not accepted your calendar invitation yet.</ion-item>
+            <ion-row class="first_row">
+              <ion-col width-20 id="u78_col">
+                <p class="number1" style="font-size:48px;"><span>18</span></p>
+                <p class="date1" style="font-size:16px;"><span>MON, FEB</span></p>
+              </ion-col>
+              <ion-col width-80>
+                <p id="u25"><span>12:30 PM - 1:30 PM</span></p>
+                <p id="u26"><span>Acme Distribution <br> Tampa, FL <br> Nick Douglas </span></p>
+                <p class="u74_text1">
+                  <span style="font-family: FontAwesome; font-weight: 400;padding-left: 10%;"></span>
+
+                  <span class="" id="cache108" style="font-family: &quot;Poppins Light&quot;, &quot;Poppins Regular&quot;, Poppins; font-weight: 300;">305-213-5676</span>
+                  <span id="email" > <i class="fa fa-envelope"></i></span>
+                </p>
+
+              </ion-col>
+            </ion-row>
+          </div>
+          <div (click)="mapPage();">
+            <!-- <img *ngIf="item.status == 'unpending'" class="u121_img" src="https://d26uhratvi024l.cloudfront.net/gsc/WXP0DC/55/46/96/5546965ba02c41b8b18015f5cf769369/images/home/u121.png?token=338aa82930c0e097045775ad42c3d29f"> -->
+            <img class="u122_img"  src="https://d2t44wh9rnwl5y.cloudfront.net/gsc/WXP0DC/55/46/96/5546965ba02c41b8b18015f5cf769369/images/home/u290.png?token=a2795aad28280fa0904937feef915337">
+            <span id="map" > <i class="fa fa-map-marker"></i></span>
+          </div>
+        </ion-item>
+    </ion-list>
+    <div class="submit">
+      <ion-row class="first_row">
+        <ion-col width-15 id="u78_col">
+          <p class="number" style="font-size:48px;"><span>18</span></p>
+          <p class="date" style="font-size:16px;"><span>FEB</span></p>
+        </ion-col>
+        <ion-col width-85>
+          <p id="u25"><span>2:00 PM - 3:00 PM</span></p>
+          <p id="u26"><span>Johanssen HVAC, Jacksonville, FL <br> Sandra Wilkins </span></p>
+        </ion-col>
+      </ion-row>
+      <div class={{this.divClass1}}>
+        <ion-row class="title_list">
+          <ion-col>
+              <span  *ngIf="status1 == 'unsubmitted'" id="check-o" style="float: left"> <i class="fa fa-calendar-plus-o"></i></span>
+              <span  *ngIf="status1 == 'unsubmitted'" id="cache208" >UPDATE SUBMITTED</span>
+              <span  *ngIf="status1 != 'unsubmitted'" id="calendar-o" style="float: left"> <i class="fa fa-calendar-o"></i></span>
+              <span  *ngIf="status1 != 'unsubmitted'" id="cache209" >EVENT UPDATE</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-item text-wrap id="chat">{{this.msg1}}</ion-item>
+        </ion-row>
+        <ion-row class="checkbox_input">
+          <input  type="checkbox" value="checkbox1" checked="">
+          <label> Wed, February 23, 2018 1:00 PM</label>
+        </ion-row>
+        <ion-row class="checkbox_input">
+          <input type="checkbox" value="checkbox2" checked="">
+          <label> Fri, March 2, 2018 10:00 AM</label>
+        </ion-row>
+        <ion-row  *ngIf="status1 != 'unsubmitted'"  class="checkbox_input">
+          <input  type="checkbox" value="checkbox3" checked="">
+          <label> Fri, March 2, 2018 10:00 AM</label>
+        </ion-row>
+        <p  *ngIf="status1 != 'unsubmitted'" class="u74_text" style="background-color: rgba(10, 73, 123, 1);transform-origin: 62.5px 10.5px 0px; top: 0px;"><span style="font-family: FontAwesome; font-weight: 400;"></span><span class="" id="cache107" style="font-family: FontAwesome; font-weight: 400;"> </span><span class="" id="cache108" style="font-family: &quot;Poppins Light&quot;, &quot;Poppins Regular&quot;, Poppins; font-weight: 300;">Choose another option</span></p>
+        <button ion-button block class="event-button" (click)="update2();" >
+          <ion-label>{{this.btn1}}</ion-label>
+        </button>
+      </div>
+    </div>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <div id="u87_text" style = "float: left; clear: left;" (click)="openHelp();">
+    <p><span>Need Help?</span></p>
+  </div>
+  <div id="u86_text"  style = "float: right;" (click)="contact();">
+    <p><span>Contact Us</span></p>
+  </div>
+</ion-footer>

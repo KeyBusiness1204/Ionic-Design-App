@@ -1,0 +1,102 @@
+page-login {
+  .statusbar {
+    position: relative;
+  }
+  ion-content{
+      background: linear-gradient(225deg, rgba(102, 102, 204, 1) 0%, rgba(102, 102, 204, 1) 44%,
+      rgba(15, 117, 188, 1) 100%, rgba(15, 117, 188, 1) 100%);
+      position: relative;
+  }
+  #u2 {
+    border-width: 0px;
+    margin-top: -15%;
+    text-align: center;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    font-weight: 300;
+    font-style: normal;
+    font-size: 62px;
+    color: #FFFFFF;
+  }
+  #u3 {
+    font-size: 20px;
+    border-width: 0px;
+    margin-top: 30%;
+    text-align: center;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    font-weight: 300;
+    font-style: normal;
+    color: #FFFFFF;
+    transform-origin: 74px 10.5px 0px;
+  }
+  .login-form{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: calc(100% - 30%);
+    margin: -15% 0 0 -25%;
+    .item-ios{
+      background-color: transparent;
+      color: white
+    }
+  }
+  .list-ios > .item-block:first-child{
+    border-top: 0px;
+  }
+  .list-ios > .item-block:last-child {
+      border-bottom: 0px ;
+  }
+  .list-ios > .item-block:last-child .item-inner {
+    border-bottom: 0.55px solid #c8c7cc;
+}
+
+  .login-button{
+    font-size: 20px;
+    margin-top: 60%;
+    width: calc(100% - 30%);
+    left: 17%;
+    height: 50px;
+    background-color: white;
+    color: #0A497B;
+  }
+  .forgot{
+    color: white;
+    text-align: center;
+    height: 10px;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+  .fa-envelope{
+    font-size: 24px;
+  }
+  .fa-lock{
+    font-size: 30px;
+  }
+  #u12_text {
+    color: #FFFFFF;
+    white-space: nowrap;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    text-align: center;
+    font-size: 15px;
+  }
+  .fa-question-circle{
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-left: 15px;
+  }
+  .fa-facebook-square{
+    font-size: 36px;
+    color: #FFFFFF;
+    margin-right: 15px;
+  }
+  #u15 {
+    color: #FFFFFF;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 53px;
+    left: 0px;
+    top: 0px;
+    background: inherit;
+    background-color: rgba(204, 0, 0, 1);
+  }
+}

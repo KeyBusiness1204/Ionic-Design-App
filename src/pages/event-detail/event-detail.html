@@ -1,0 +1,106 @@
+<ion-header>
+    <ion-navbar class="header_title" hideBackButton="true">
+      <!-- <button ion-button left class="menu_bt"> -->
+        <i  (click)="back();" class="fa fa-chevron-left"></i>
+      <!-- </button> -->
+      <button ion-button menuToggle right class="menu_bt">
+        <i class="fa fa-cog"></i>
+      </button>
+      <ion-title id="title" (click)="this.mainCalendar();">engage</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item class="list">
+    <span id="cache224" style="clear: left; float: left">EVENT DETAILS</span>
+  </ion-item>
+  <ion-grid>
+    <ion-row class="title_list_{{this.status}}">
+      <ion-col>
+          <span  *ngIf="status == 'unpending'" id="check-o" style="float: left"> <i class="fa fa-calendar-check-o"></i></span>
+          <span  *ngIf="status == 'unpending'" id="cache208" >CONFIRMED</span>
+          <span  *ngIf="status != 'unpending'" id="calendar-o" style="float: left"> <i class="fa fa-calendar-o"></i>PENDING CONFIRMATION</span>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col width-20 id="u78_col">
+        <p class="number" style="font-size:48px;"><span>18</span></p>
+        <p class="date" style="font-size:16px;"><span>THU, FEB</span></p>
+      </ion-col>
+      <ion-col width-80>
+        <p id="u25"><span>10:00 AM - 11:00 AM</span></p>
+        <p id="u26"><span>Johanssen HVAC <br> Jacksonville, FL <br> Sandra Wilkins </span></p>
+        <p *ngIf="status == 'unpending'" class="u74_text" style="background-color: #006600; transform-origin: 62.5px 10.5px 0px; top: 0px;"><span style="font-family: FontAwesome; font-weight: 400;"></span><span class="" id="cache107" style="font-family: FontAwesome; font-weight: 400;"> </span><span class="" id="cache108" style="font-family: &quot;Poppins Light&quot;, &quot;Poppins Regular&quot;, Poppins; font-weight: 300;">305-699-3112</span></p>
+        <p *ngIf="status != 'unpending'" class="u74_text" style="background-color: rgba(10, 73, 123, 1);transform-origin: 62.5px 10.5px 0px; top: 0px;"><span style="font-family: FontAwesome; font-weight: 400;"></span><span class="" id="cache107" style="font-family: FontAwesome; font-weight: 400;"> </span><span class="" id="cache108" style="font-family: &quot;Poppins Light&quot;, &quot;Poppins Regular&quot;, Poppins; font-weight: 300;">305-699-3112</span></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button *ngIf="!this.added_flight" ion-button block class="add-event-button" (click)="addEvent();" >
+          <ion-label><i id="calendar" class="fa fa-plane"></i>ADD FLIGHT</ion-label>
+        </button>
+        <ion-row *ngIf="this.added_flight"  id="line_dotted" style="margin-top:0px; margin-left: -10px;">
+          <ion-item id="air_line" style="width: 90%;border: 0px;padding-left:0px;margin-top: -10px;" >
+            <i style="color:#028DCA;" class="fa fa-plane"></i>{{this.airline}}
+          </ion-item>
+          <ion-item id="flight_num" style=" width: 100%;border: 0px " >
+            {{this.flight_num}}
+            <span *ngIf="this.flight_status == 'ON TIME'" style="color:#49AE61;">ON TIME</span>
+            <span *ngIf="this.flight_status == 'DELAYED'" style="color:red;">DELAYED</span>
+            <i (click)="nextFlight();" *ngIf="this.next" style="color:#028DCA; margin-left: 10px;" class="fa fa-step-forward"></i>
+            <i (click)="prevFlight();" *ngIf="!this.next" style="color:#028DCA; margin-left: 10px;" class="fa fa-step-backward"></i>
+            <i style="color:#028DCA; margin-left: 12px;" class="fa fa-refresh"></i>
+          </ion-item>
+        </ion-row>
+      </ion-col>
+      <ion-col>
+        <button ion-button block class="edit-event-button" (click)="editEvent();" >
+          <ion-label> <i  class="fa fa-calendar"></i>EDIT EVENT</ion-label>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row id="message">
+      <ion-item class="message">
+          <span id="cache225">SEND MESSAGE TO ATTENDEE</span>
+      </ion-item>
+      <ion-col width-70>
+          <ion-textarea type="text" [(ngModel)]="this.comment" placeholder="Description..."></ion-textarea>
+      </ion-col>
+      <ion-col width-30>
+        <button ion-button block class="send-button" (click)="sendMessage();" >
+        <ion-label><i class="fa fa-paper-plane"></i></ion-label>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row id="tab">
+      <ion-col width-40 (click)= "load_Map();" >
+        <span id="cache22">LOCATION MAP</span>
+        <div id="u194_div" *ngIf="this.tab" style="background-color: rgba(15, 117, 188, 1);width: 105px; height: 3px;"></div>
+      </ion-col>
+      <ion-col width-60 (click)= "messageHistory();">
+        <span id="cache23">MESSAGE HISTORY</span>
+        <div id="u195_div" *ngIf="!this.tab" style="background-color: rgba(15, 117, 188, 1);width: 120px; height: 3px;"></div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="tab">
+        <div #googlemap id="map" *ngIf="this.tab"></div>
+        <ion-scroll *ngIf="!this.tab" id='msgScroll' scrollY="true">
+          <div *ngFor="let message of messages;">
+              <ion-item text-wrap id="chat" *ngIf="!this.tab">{{message.text}}</ion-item>
+              <span  *ngIf="!this.tab" style="color:#999999;float: left;
+              margin-left: 5%;">{{message.time}}</span>
+          </div>
+        </ion-scroll>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <div id="u87_text" style = "float: left; clear: left;" (click)="openHelp();">
+    <p><span>Need Help?</span></p>
+  </div>
+  <div id="u86_text"  style = "float: right;" (click)="contact();">
+    <p><span>Contact Us</span></p>
+  </div>
+</ion-footer>

@@ -1,0 +1,293 @@
+page-add {
+  .header_title{
+    padding: 10px;
+  }
+  .bar-button-menutoggle-ios{
+    margin: -3px 6px;
+  }
+  #title{
+    padding-top: 4px;
+  }
+  .header-ios .toolbar-background-ios{
+    background-color: rgba(10, 73, 123, 1);
+    height: 60px;
+  }
+  .toolbar-ios{
+    min-height: 60px;
+  }
+  .header-md .toolbar-background-md{
+    background-color: rgba(10, 73, 123, 1);
+    height: 60px;
+  }
+  .toolbar-title-ios{
+    font-size: 28px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+  }
+  .toolbar-title-md{
+    font-size: 28px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+  }
+  .fa-cog{
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  .fa-chevron-left{
+    padding-top: 4px;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  .list{
+    font-family: 'Montserrat-Bold', 'Montserrat Bold', 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+    .label-ios {
+      margin: -5% 8px -10px 2%;
+    }
+    #cache224{
+      color: #666666;
+      padding-top: 2%;
+    }
+  }
+  .list{
+    padding-left: 0px;
+    margin-top: -2%;
+  }
+  .title_list_pending{
+    background: rgba(15, 117, 188, 1);
+    border-radius : 3px;
+    height: 38px;
+  }
+  .title_list_unpending{
+     background:rgba(73, 174, 97, 1);
+     border-radius : 3px;
+     height: 38px;
+  }
+  check-o{
+    font-weight: 400;
+    font-size: 22px;
+    color: #006600;
+    margin: 0% 3%;
+  }
+  #check-o{
+    font-weight: 400;
+    font-size: 22px;
+    color: #006600;
+    margin: 1% 3%;
+  }
+  #calendar-o{
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    font-size: 16px;
+    color: white;
+    width: 95%;
+    i{
+      font-weight: 400;
+      font-size: 22px;
+      color: #0A497B;
+      margin: 2% 3%;
+    }
+  }
+  #cache208{
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    padding: 1% 0%;
+    margin-top: 35%;
+  }
+  #u78_col{
+    padding: 10px;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    // float: left;
+    p{
+      color: #666666;
+    }
+    .number{
+      margin: -15% 7%;
+      font-size: 72px !important;
+    }
+    .date{
+      margin: -20% 7%;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .number{
+    margin: 0px 0px;
+    font-size: 72px !important;
+  }
+  .date{
+    margin: 0px 0px;
+    font-size: 16px;
+  }
+  #u26{
+    color: #666666 !important;
+    font-family: 'Poppins-Bold', 'Poppins Bold', 'Poppins Regular', 'Poppins';
+    font-size: 14px;
+    margin-top: 2%;
+    flex: 1;
+  }
+  #u25{
+    font-family: 'Poppins-Bold', 'Poppins Bold', 'Poppins Regular', 'Poppins';
+    font-weight: 700;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 0%;
+    flex: 1;
+  }
+  .u74_text{
+    margin-top: 0px;
+    color: white;
+    width: 136px;
+    text-align: center;
+    background: inherit;
+    border-radius: 10px;
+  }
+  ion-col {
+    &[width-20] {
+    flex: 0 0 30%;
+    max-width: 30%;
+    }
+
+    &[width-80] {
+    flex: 0 0 70%;
+    max-width: 70%;
+    }
+  }
+  .item-ios.item-block .item-inner{
+    border-bottom: 0px;
+  }
+
+  #u87_text{
+    margin-left: 5%;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  #u86_text{
+    margin-right: 5%;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: right;
+  }
+
+  ion-footer{
+    height: 8%;
+    background-color: #333333;
+  }
+
+  .back_button{
+    margin-top: 20px;
+    background-color: rgba(238, 238, 238, 1);
+    border-radius: 3px;
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    color: #666666;
+  }
+  .date{
+    #line_dotted{
+      border-left: 3px dotted rgba(15, 117, 188, 1);
+      margin-left: 5%;
+      margin-top: 3%;
+    }
+    .row:last-child #line_dotted {
+      border-left: 0px;
+    }
+    .img{
+      padding-right: 5px;
+    }
+    .item-ios{
+      border: 1px solid rgba(204, 204, 204, 1);
+    }
+    .label-ios{
+      font-family: 'Montserrat-Bold', 'Montserrat Bold', 'Montserrat';
+      font-weight: 700;
+      font-style: normal;
+      color: #666666;
+    }
+
+    .select-ios .select-icon .select-icon-inner{
+      width: 11px;
+      color: #666666;
+      left: -7px;
+      top: 60%;
+    }
+    ion-select{
+      max-width: 100%;
+    }
+    #select_airline{
+      padding: 0px;
+      width: 100%;
+    }
+    #connect_airline{
+      padding: 0px;
+      width: 100%;
+    }
+  }
+  .input-wrapper{
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    font-style: normal;
+    font-size: 16px;
+    color: #666666;
+    text-align: left;
+    line-height: 18px;
+  }
+  #flight_num{
+    .input-wrapper{
+      height: 15px;
+    }
+  }
+  #connecting_num{
+    .input-wrapper{
+      height: 15px;
+    }
+  }
+  #air_line{
+    .input-wrapper{
+      margin-bottom: -10px;
+    }
+  }
+  #connect_air_line{
+    .input-wrapper{
+      margin-bottom: -10px;
+    }
+  }
+  .edit-event-button{
+    margin-top: 20px;
+    background-color: rgba(15, 117, 188, 1);
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    font-weight: 400;
+  }
+  .app_input{
+    margin-right: 60%;
+  }
+  #app_label{
+    margin-left: 92%;
+  }
+  // #app_label_date{
+  //   width: 22px;
+  //   right: 10px;
+  // }
+  .fa-calendar{
+    font-family: 'FontAwesome';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    color: #666666;
+  }
+  .list .label-ios{
+    margin: 0px;
+  }
+  .item-select {
+    width: 75%;
+  }
+  .item-select select {
+    left: 0;
+  }
+}

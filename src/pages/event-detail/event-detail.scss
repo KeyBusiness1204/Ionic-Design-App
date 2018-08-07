@@ -1,0 +1,302 @@
+page-event-detail {
+  .header_title{
+    padding: 10px;
+  }
+  .bar-button-menutoggle-ios{
+    margin: -3px 6px;
+  }
+  #title{
+    padding-top: 4px;
+  }
+  .header-ios .toolbar-background-ios{
+    background-color: rgba(10, 73, 123, 1);
+    height: 60px;
+  }
+  .toolbar-ios{
+    min-height: 60px;
+  }
+  .header-md .toolbar-background-md{
+    background-color: rgba(10, 73, 123, 1);
+    height: 60px;
+  }
+  .toolbar-title-ios{
+    font-size: 28px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+  }
+  .toolbar-title-md{
+    font-size: 28px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+  }
+  .fa-cog{
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  .fa-chevron-left{
+    padding-top: 4px;
+    font-size: 24px;
+    color: #FFFFFF;
+  }
+  .list{
+    font-family: 'Montserrat-Bold', 'Montserrat Bold', 'Montserrat';
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+    .label-ios {
+      margin: -5% 8px -10px 2%;
+    }
+    #cache224{
+      color: #666666;
+      padding-top: 2%;
+    }
+  }
+  .list{
+    padding-left: 0px;
+    margin-top: -2%;
+  }
+  .item-ios.item-block .item-inner{
+    border-bottom: 0px;
+  }
+  #check-o{
+    font-weight: 400;
+    font-size: 22px;
+    color: #006600;
+    margin: 1% 3%;
+  }
+  #calendar-o{
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    font-size: 16px;
+    color: white;
+    width: 95%;
+    i{
+      font-weight: 400;
+      font-size: 22px;
+      color: #0A497B;
+      margin: 2% 3%;
+    }
+  }
+  #cache208{
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    padding: 1% 0%;
+    margin-top: 35%;
+  }
+  #tab{
+    ion-col {
+      &[width-40] {
+      flex: 0 0 40%;
+      max-width: 40%;
+      }
+
+      &[width-60] {
+      flex: 0 0 60%;
+      max-width: 60%;
+      }
+    }
+  }
+  #message{
+    ion-col{
+      &[width-30] {
+      flex: 0 0 30%;
+      max-width: 30%;
+      }
+
+      &[width-40] {
+      flex: 0 0 70%;
+      max-width: 70%;
+      }
+    }
+  }
+  ion-col {
+    &[width-20] {
+    flex: 0 0 30%;
+    max-width: 30%;
+    }
+
+    &[width-80] {
+    flex: 0 0 70%;
+    max-width: 70%;
+    }
+  }
+  .title_list_pending{
+    background: rgba(15, 117, 188, 1);
+    border-radius : 3px;
+    height: 38px;
+  }
+  .title_list_unpending{
+     background:rgba(73, 174, 97, 1);
+     border-radius : 3px;
+     height: 38px;
+  }
+  #u78_col{
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    // float: left;
+    p{
+      color: #666666;
+    }
+    .number{
+      margin: -12% 7%;
+      font-size: 72px !important;
+    }
+    .date{
+      margin: -20% 7%;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .fa-plane{
+    padding: 5px;
+  }
+  .fa-calendar{
+    padding: 5px;
+  }
+  .edit-event-button{
+    background-color: rgba(15, 117, 188, 1);
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    font-weight: 400;
+  }
+  .add-event-button{
+    color: #028DCA;
+    font-family: 'Montserrat-Regular', 'Montserrat';
+    background-color:white;
+    border: 1.5px solid #028DCA;
+  }
+
+  .number{
+    margin: 0px 0px;
+    font-size: 72px !important;
+  }
+  .date{
+    margin: 0px 0px;
+    font-size: 16px;
+  }
+
+  // #u24{
+  //   font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+  //   font-size: 14px;
+  //   color: #0F75BC;
+  //   line-height: 18px;
+  //   width: 125%;
+  //   padding: 7% 28%;
+    #u26{
+      line-height: 18px;
+      color: #666666 !important;
+      font-family: 'Poppins-Bold', 'Poppins Bold', 'Poppins Regular', 'Poppins';
+      font-size: 14px;
+      margin-top: 0%;
+      flex: 1;
+    }
+    // p{
+    //   color: white;
+    //   float: left;
+    // }
+    #u25{
+      font-family: 'Poppins-Bold', 'Poppins Bold', 'Poppins Regular', 'Poppins';
+      font-weight: 700;
+      font-size: 14px;
+      color: #333333;
+      margin-bottom: 0%;
+      flex: 1;
+    }
+  // }
+  .u74_text{
+    margin-top: 0px;
+    color: white;
+    width: 136px;
+    text-align: center;
+    background: inherit;
+    border-radius: 10px;
+  }
+  #u78_col{
+    padding: 10px;
+  }
+  #cache225{
+    color: #666666;
+    padding-top: 2%;
+    font-family: 'Montserrat-Bold', 'Montserrat Bold', 'Montserrat';
+    font-weight: 700;
+    padding-left: 2%;
+  }
+  ion-textarea{
+    border: 1px #337ab7 solid;
+    width: 117%;
+    height: 61px;
+    border-radius: 4px;
+  }
+  textarea.text-input{
+      height: 60px;
+      margin: 3px 8px 11px 1px;
+      font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+      font-weight: 300;
+      font-style: normal;
+      color: #666666;
+      text-align: left;
+      line-height: 18px;
+  }
+  .message{
+    padding-left: 0px;
+  }
+  .send-button{
+    width: 77%;
+    margin: 0px 0px;
+    height: 61px;
+    float: right;
+    background: #0f75bc;
+  }
+  #cache22{
+    color: #0F75BC;
+  }
+  #cache23{
+    color: #0F75BC;
+  }
+  u{
+    margin-left: 10%;
+  }
+  .tab{
+    text-align: center;
+    #map {
+      width: 105%;
+      height: 155px;
+      margin-left: -3%;
+    }
+  }
+  #msgScroll{
+    .scroll-content{
+      height: 170px;
+      padding: 10px;
+    }
+  }
+
+  #air_line{
+    .label-ios{
+      margin: 0px;
+    }
+  }
+  #flight_num{
+    .input-wrapper{
+      height: 15px;
+    }
+  }
+  #u87_text{
+    margin-left: 5%;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+  #u86_text{
+    margin-right: 5%;
+    font-family: 'Poppins Light', 'Poppins Regular', 'Poppins';
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: right;
+  }
+  ion-footer{
+    height: 8%;
+    background-color: #333333;
+  }
+}
